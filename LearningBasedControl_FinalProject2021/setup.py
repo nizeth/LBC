@@ -43,6 +43,7 @@ class CMakeBuild(build_ext):
                       '-DPYTHON_EXECUTABLE=' + sys.executable]
 
         if __CMAKE_PREFIX_PATH__ is not None:
+            __CMAKE_PREFIX_PATH__ = "/content/raisimlib/raisim/linux"
             cmake_args.append('-DCMAKE_PREFIX_PATH=' + __CMAKE_PREFIX_PATH__)
 
         cfg = 'Debug' if __DEBUG__ else 'RelWithDebInfo'
